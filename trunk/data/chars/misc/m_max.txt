@@ -1,0 +1,23 @@
+name	m_max
+health	0
+type	text
+subtype noskip
+shadow	0
+setlayer 268435466
+
+anim idle
+	loop	0
+	offset	9 13
+	delay	20
+	frame	data/chars/maxima/idle000.gif
+	frame	data/chars/maxima/idle001.gif
+	frame	data/chars/maxima/idle002.gif
+	frame	data/chars/maxima/idle003.gif
+	frame	data/chars/maxima/idle004.gif
+	frame	data/chars/maxima/idle005.gif
+	frame	data/chars/maxima/idle006.gif
+	frame	data/chars/maxima/idle007.gif
+	frame	data/chars/maxima/idle008.gif
+	delay	-1
+	frame	data/chars/maxima/idle009.gif
+

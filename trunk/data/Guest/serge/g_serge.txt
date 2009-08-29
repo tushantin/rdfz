@@ -1,0 +1,494 @@
+# Do not forget to name your character.
+# Health is optional.
+
+name	Serge
+health	150
+mp	100
+speed	9
+type	npc
+shadow	3
+diesound data/sounds/sedead2.wav
+running 30 5 2 1 0
+icon	data/chars/serge/SIcon.gif
+lifespan 10
+
+atchain 1 2 1 3 0 2 1 4 3 0 2 3
+combostyle 1
+
+dust Flash
+gfxshadow 1
+
+# To create an alternate colour version, enter the path to
+# an image in the original, and one in the alternative colourset.
+remap	data/chars/serge/walk009.gif data/chars/serge/alter.gif
+
+
+# Animation syntax:
+# First enter the name of the animation:
+#	anim	[name]				idle, walk, jump, etc
+#
+# Then add some other values, like so:
+# 	loop	[0/1]
+#	offset	x y					location of center,bottom
+#	delay	num					in 100th seconds
+#	bbox	x y width height			weak point
+#	attack	x y width height force drop long	attack rect, force, drop opponent, hurt longer
+#
+# Every time you specify "frame", a frame is appended to the animation,
+# using the settings you just specified. You can change all the values
+# at any time between adding frames, though changing "loop" again is
+# ofcourse essentially pointless.
+# All numeric values default to 0 if not specified.
+# 
+#	frame	[path]
+#
+# The maximum number of frames per animation is 32.
+# You may use GIF, PCX or BMP files.
+
+
+anim idle
+	loop	1
+		offset  75  102
+		bbox  60  9  34  94
+		delay  20
+	frame	data/chars/serge/Standing/th_000B_001.gif
+	offset	57 102
+	bbox	44 11 30 92
+	frame	data/chars/serge/Standing/th_000B_000.gif
+		offset  59  102
+	frame  data/chars/serge/Standing/th_000B_013.gif
+		offset  58  102
+		bbox  43  8  32  95
+	frame	data/chars/serge/Standing/th_000B_012.gif
+	frame	data/chars/serge/Standing/th_000B_013.gif
+
+anim walk
+	loop	1
+	delay	7
+	offset	59 121
+	bbox	52 15 27 109
+	frame	data/chars/serge/walking/th_000B_023.gif
+		offset  61  121
+	frame	data/chars/serge/walking/th_000B_025.gif
+	frame	data/chars/serge/walking/th_000B_026.gif
+	frame	data/chars/serge/walking/th_000B_027.gif
+		offset  61  119
+	frame	data/chars/serge/walking/th_000B_021.gif
+		offset  62  119
+	frame	data/chars/serge/walking/th_000B_022.gif
+
+anim get
+	loop	0
+	delay	5
+	offset	41 95
+	frame	data/chars/serge/get000.gif
+	frame	data/chars/serge/get001.gif
+	delay	30
+	frame	data/chars/serge/get002.gif
+	delay	5
+	frame	data/chars/serge/get001.gif
+	frame	data/chars/serge/get000.gif
+
+
+anim attack1
+	loop	0
+		delay  4
+		bbox  50  9  27  86
+		offset  63  103
+		move  2
+	frame  data/chars/serge/punch/th_th_000B_069.gif
+	bbox	55 9 24 89
+		attack  80  20  55  18  5
+	frame	data/chars/serge/punch/th_th_000B_070.gif
+	attack	86 19 45 17 5
+	bbox	57 12 27 88
+	offset	69 103
+	frame	data/chars/serge/punch/th_th_000B_071.gif
+		attack  87  24  27  19  5
+	frame	data/chars/serge/punch/th_th_000B_072.gif
+	attack	0 0 0 0 0
+	bbox	51 9 29 92
+	offset	62 104
+	delay	2
+	frame	data/chars/serge/punch/th_th_000B_073.gif
+	offset	62 103
+	frame	data/chars/serge/punch/th_th_000B_074.gif
+
+
+anim attack2
+	loop	0
+	delay	6
+	offset	60 103
+	bbox	49 10 29 91
+		move  2
+	frame	data/chars/serge/punch/th_th_000B_05E.gif
+	bbox	41 11 27 93
+	move	5
+	offset	48 104
+
+		attack  67  15  33  21  10
+	frame	data/chars/serge/punch/th_th_000B_06A.gif
+	bbox	54 10 27 90
+	attack	79 17 34 20 10
+	offset	64 104
+
+	frame	data/chars/serge/punch/th_th_000B_06B.gif
+	move	0
+		bbox  50  8  28  93
+		attack  0  0  0  0  0
+	frame	data/chars/serge/punch/th_th_000B_06C.gif
+
+
+anim attack3
+	loop	0
+	delay	6
+	offset	68 105
+	bbox	52 10 27 93
+		move  2
+	frame	data/chars/serge/punch/th_th_000B_0A6.gif
+	move	10
+	offset	55 103
+	bbox	35 9 34 94
+	frame	data/chars/serge/punch/th_th_000B_0A7.gif
+	offset	53 103
+	frame	data/chars/serge/punch/th_th_000B_0A8.gif
+	move	5
+	attack	0 0 0 0 0 0
+	bbox	44 7 27 97
+	frame	data/chars/serge/punch/th_th_000B_0A9.gif
+	attack	90 28 53 27 15 1
+		offset  77  103
+		bbox  67  15  26  85
+	frame	data/chars/serge/punch/th_th_000B_0AA.gif
+	attack	74 30 54 29 15
+		offset  63  105
+		bbox  52  16  27  88
+	frame	data/chars/serge/punch/th_th_000B_0AB.gif
+	sound	data/sounds/bam.wav
+	bbox	76 7 27 78
+		offset  88  87
+		attack  0  0  0  0  0
+	frame	data/chars/serge/punch/th_th_000B_0AC.gif
+	move	2
+	offset	74 86
+		bbox  59  9  35  78
+	frame	data/chars/serge/punch/th_th_000B_0AD.gif
+	offset	67 85
+	bbox	56 2 33 90
+	frame	data/chars/serge/punch/th_th_000B_0AF.gif
+		offset  75  102
+		bbox  69  19  30  87
+	frame  data/chars/serge/punch/th_th_000B_0B0.gif
+
+anim  attack4
+	loop  0
+	fastattack  1
+		offset  62  104
+		bbox  48  7  31  96
+		delay  10
+		attack  77  23  18  25  0
+		move  2
+	frame  data/chars/serge/punch/th_th_000B_05E.gif
+		attack  79  17  27  18  5
+	frame  data/chars/serge/punch/th_th_000B_06B.gif
+		attack  79  17  27  18  0
+	frame  data/chars/serge/punch/th_th_000B_069.gif
+		offset  67  104
+		bbox  58  10  26  95
+		attack  84  19  50  17  5
+	frame  data/chars/serge/punch/th_th_000B_071.gif
+		attack  37  58  35  19  0
+	frame  data/chars/serge/Kick/th_000B_0C2.gif
+		offset  37  121
+		bbox  31  22  28  96
+		attack  62  8  53  70  5
+	frame  data/chars/serge/Kick/th_000B_0C4.gif
+		offset  35  103
+		bbox  24  6  33  99
+		attack  51  47  20  47  0
+	frame  data/chars/serge/Kick/th_000B_0C9.gif
+		offset  54  103
+		bbox  50  4  37  102
+		attack  85  18  24  52  5
+	frame  data/chars/serge/Kick/th_000B_085.gif
+		offset  16  149
+		bbox  11  45  28  94
+		attack  21  14  23  47  0
+	frame  data/chars/serge/Kick/th_000B_12B.gif
+		offset  56  107
+		bbox  43  21  33  79
+		attack  69  56  71  52  6  1
+	frame  data/chars/serge/Kick/th_000B_0D0.gif
+		offset  37  120
+		bbox  22  22  39  103
+		attack  55  47  22  25  0  0
+	frame  data/chars/serge/Kick/th_000B_127.gif
+
+
+anim special
+	loop	0
+	delay	3
+	offset	76 133
+	frame	data/chars/serge/super000.gif
+	frame	data/chars/serge/super001.gif
+	frame	data/chars/serge/super002.gif
+	frame	data/chars/serge/super003.gif
+	frame	data/chars/serge/super004.gif
+	frame	data/chars/serge/super005.gif
+	blast	5 50 64 85 20 1
+	frame	data/chars/serge/super006.gif
+	blast	5 50 64 137 20 1
+	frame	data/chars/serge/super007.gif
+	blast	69 50 64 72 20 1
+	frame	data/chars/serge/super008.gif
+	blast	0 0 0 0 0
+
+# second spin
+	frame	data/chars/serge/super015.gif
+	blast	0 67 116 68 20 1
+	frame	data/chars/serge/super014.gif
+	blast	3 57 72 76 20 1
+	frame	data/chars/serge/super013.gif
+	blast	66 52 52 83 20 1
+	frame	data/chars/serge/super012.gif
+	blast	0 0 0 0 0
+	frame	data/chars/serge/super011.gif
+	frame	data/chars/serge/super010.gif
+	frame	data/chars/serge/super009.gif
+# end second spin
+
+	frame	data/chars/serge/super016.gif
+	frame	data/chars/serge/super017.gif
+	frame	data/chars/serge/super018.gif
+#	blast	47 1 48 99 15
+
+
+
+anim freespecial
+	loop	0
+	delay	5
+	offset	41 115
+	bbox	38 15 19 102
+	sound	data/sounds/sergeblow.wav
+	frame	data/chars/serge/kiss000.gif
+	frame	data/chars/serge/kiss001.gif
+	frame	data/chars/serge/kiss002.gif
+	frame	data/chars/serge/kiss003.gif
+	frame	data/chars/serge/kiss004.gif
+	frame	data/chars/serge/kiss005.gif
+	attack	56 28 36 15 20 1
+	frame	data/chars/serge/kiss006.gif
+	attack	56 29 44 23 20 1
+	frame	data/chars/serge/kiss007.gif
+	attack	67 34 75 36 20 1
+	frame	data/chars/serge/kiss008.gif
+	attack	68 33 104 53 20 1
+	frame	data/chars/serge/kiss009.gif
+	attack	67 35 112 58 20 1
+	frame	data/chars/serge/kiss010.gif
+	attack	67 35 117 58 20 1
+	frame	data/chars/serge/kiss011.gif
+	attack	67 35 122 58 20 1
+	frame	data/chars/serge/kiss012.gif
+	frame	data/chars/serge/kiss013.gif
+	frame	data/chars/serge/kiss014.gif
+	attack	0 0 0 0
+	frame	data/chars/serge/kiss015.gif
+	frame	data/chars/serge/kiss016.gif
+	frame	data/chars/serge/kiss017.gif
+	frame	data/chars/serge/kiss018.gif
+	frame	data/chars/serge/kiss019.gif
+	frame	data/chars/serge/kiss020.gif
+	frame	data/chars/serge/kiss021.gif
+	frame	data/chars/serge/kiss022.gif
+
+
+
+
+anim jump
+	loop	0
+	offset	50 113
+	delay	7
+	bbox	47 17 26 72
+	frame	data/chars/serge/jump/th_000B_02A.gif
+	bbox	49 21 33 59
+	frame	data/chars/serge/jump/th_000B_02B.gif
+	bbox	51 19 31 53
+	frame	data/chars/serge/jump/th_000B_02C.gif
+	bbox	35 16 32 56
+		offset  41  112
+	frame	data/chars/serge/jump/th_000B_02D.gif
+	bbox	46 15 31 82
+		offset  56  114
+	frame	data/chars/serge/jump/th_000B_02E.gif
+	delay	1000
+	bbox	62 19 25 74
+		offset  73  117
+	frame	data/chars/serge/jump/th_000B_02F.gif
+
+
+anim jumpattack
+	loop	0
+	delay	3
+		offset  82  87
+		bbox  65  26  31  58
+	frame	data/chars/serge/Kick/th_000B_0CF.gif
+		offset  69  86
+		bbox  44  23  34  58
+		attack  96  33  33  75  12  1
+		delay  1000
+	frame  data/chars/serge/Kick/th_000B_0D0.gif
+
+
+anim jumpattack2
+	loop	0
+	delay	7
+	offset	43 90
+	bbox	65 14 35 48
+	frame	data/chars/serge/jumpattack/th_th_000B_077.gif
+	bbox	52 22 42 45
+	frame	data/chars/serge/jumpattack/th_th_000B_078.gif
+	bbox	37 37 57 22
+	attack	85 48 16 25 6 0
+		offset  42  83
+	frame	data/chars/serge/jumpattack/th_th_000B_079.gif
+
+
+anim grab
+	loop	0
+	offset	57 104
+	bbox	52 15 31 81
+	delay	1000
+	frame	data/chars/serge/Grabthrow/th_000B_053.gif
+
+
+anim grabattack
+	loop	0
+	offset	36 100
+	bbox	34 9 19 93
+	delay	4
+	frame	data/chars/serge/knee01.gif
+	frame	data/chars/serge/knee02.gif
+	delay	20
+	attack	48 35 34 26 6
+	frame	data/chars/serge/knee03.gif
+	attack	0
+	delay	4
+	frame	data/chars/serge/knee02.gif
+	frame	data/chars/serge/knee01.gif
+
+
+anim grabattack2
+	loop	0
+	offset	40 121
+	bbox	34 25 25 100
+	delay	5
+	frame	data/chars/serge/elbow01.gif
+	attack	51 4 27 51 8
+	frame	data/chars/serge/elbow02.gif
+	bbox	37 25 25 100
+	frame	data/chars/serge/elbow03.gif
+	attack	0
+	frame	data/chars/serge/elbow04.gif
+	bbox	40 25 25 100
+	frame	data/chars/serge/elbow05.gif
+	bbox	41 31 26 93
+	attack	57 37 27 35 10 1
+	frame	data/chars/serge/elbow06.gif
+	frame	data/chars/serge/elbow07.gif
+	attack	0
+	frame	data/chars/serge/elbow08.gif
+	frame	data/chars/serge/elbow09.gif
+	bbox	26 22 24 102
+	frame	data/chars/serge/elbow10.gif
+
+
+anim throw
+	loop	0
+	offset	40 60
+	delay	10
+	sound	data/sounds/sergehey.wav
+	frame	data/chars/serge/throw1.gif
+	delay	30
+	frame	data/chars/serge/throw2.gif
+	delay	10
+	frame	data/chars/serge/throw1.gif
+
+
+anim pain
+	loop	0
+	offset	31 89
+	bbox	25 12 36 79
+	delay	8
+	frame	data/chars/serge/hurt/th_000B_366.gif
+	delay	50
+		offset  45  89
+		bbox  28  20  34  70
+	frame	data/chars/serge/hurt/th_000B_367.gif
+		offset  31  89
+		bbox  23  11  36  79
+		delay  8
+	frame  data/chars/serge/hurt/th_000B_366.gif
+
+
+anim fall
+	loop	0
+	offset	42 89
+#	attack	
+	delay	8
+	frame	data/chars/serge/Fall/th_000B_36C.gif
+		offset  64  71
+	frame	data/chars/serge/Fall/th_000B_36D.gif
+		offset  81  83
+	frame	data/chars/serge/Fall/th_000B_36E.gif
+		offset  82  34
+	frame	data/chars/serge/Fall/th_000B_371.gif
+		offset  73  35
+	frame	data/chars/serge/Fall/th_000B_36F.gif
+
+
+anim rise
+	loop	0
+	offset	46 54
+	delay	10
+	frame	data/chars/serge/Rise/th_000B_050.gif
+		offset  73  72
+	frame	data/chars/serge/Rise/th_000B_051.gif
+		offset  54  104
+		bbox  43  18  30  82
+	frame	data/chars/serge/hurt/th_000B_365.gif
+
+
+anim land
+	loop	0
+	offset	62 88
+	delay	25
+	bbox	46 24 37 65
+	frame	data/chars/serge/punch/th_th_000B_0B5.gif
+
+anim  run
+	loop	1
+		offset  82  87
+	delay	8
+		bbox  80  14  27  75
+	frame  data/chars/serge/Running/th_000B_03B.gif
+		offset  69  87
+		bbox  76  15  24  71
+	frame  data/chars/serge/Running/th_000B_03C.gif
+	frame  data/chars/serge/Running/th_000B_03D.gif
+	frame  data/chars/serge/Running/th_000B_03E.gif
+		offset  83  88
+		bbox  87  17  26  58
+	frame  data/chars/serge/Running/th_000B_03F.gif
+		offset  67  87
+		bbox  67  18  34  69
+	frame  data/chars/serge/Running/th_000B_040.gif
+		offset  51  87
+		bbox  58  17  31  66
+	frame  data/chars/serge/Running/th_000B_041.gif
+		offset  69  87
+		bbox  69  17  36  65
+	frame  data/chars/serge/Running/th_000B_042.gif
+
+
+

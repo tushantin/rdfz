@@ -1,0 +1,65 @@
+# List all character models to be loaded.
+# Syntax:
+# load		[name]		[path]		// Load on startup
+# know		[name]		[path]		// Load when needed
+# 
+
+
+# Required objects. These must always be loaded.
+load	Pauser		data/chars/misc/pauser.txt
+load	Flash		data/chars/misc/flash.txt
+load	mbg		data/chars/misc/mbg.txt
+load	m_serge		data/chars/misc/m_serge.txt
+load	m_max		data/chars/misc/m_max.txt
+load	m_kid		data/chars/misc/m_kid.txt
+load	m_dummy		data/chars/misc/m_dummy.txt
+load	m_serge		data/chars/misc/mi_serge.txt
+load	m_max		data/chars/misc/mi_max.txt
+load	m_kid		data/chars/misc/mi_kid.txt
+
+# Players must also be loaded.
+load	Serge		data/chars/serge/serge.txt
+load	Max		data/chars/maxima/maxima.txt
+load	Kid		data/chars/kid/kid.txt
+
+
+# Items and other objects can be loaded when needed.
+know	Apple		data/chars/misc/apple.txt
+know	Meat		data/chars/misc/meat.txt
+know	1up		data/chars/misc/1up.txt
+know	Money		data/chars/misc/money.txt
+know	Gold		data/chars/misc/gold.txt
+know	Time		data/chars/misc/time.txt
+know	RedPin		data/chars/misc/redpin.txt
+
+# Obstacles (item containers)
+know	Box		data/chars/misc/box.txt
+know	Crate		data/chars/misc/crate.txt
+know	Trash		data/chars/misc/trash.txt
+know	Table		data/chars/misc/table.txt
+know	Chair		data/chars/misc/chair.txt
+know	Fence		data/chars/misc/fence.txt
+know	Drum		data/chars/misc/drum.txt
+know	Trolly		data/chars/misc/trolly.txt
+
+
+know	Angel		data/chars/angel/angel.txt
+know	Billy		data/chars/billy/billy.txt
+know	Jhun		data/chars/jhun/jhun.txt
+
+# Not a real enemy... ;)
+know	Ramon		data/chars/ramon/ramon.txt
+
+# Guests
+load	Serge		data/Guest/serge/g_serge.txt
+load	g_kid		data/Guest/kid/g_kid.txt
+
+# Other stuff
+know	Knife		data/chars/misc/knife.txt
+know	Shot		data/chars/misc/shot.txt
+know	Star		data/chars/misc/star.txt
+know	Steam		data/chars/misc/steam.txt
+know	Steamer		data/chars/misc/steamer.txt
+know	Furnace		data/chars/misc/furnace.txt
+know	Crab		data/chars/crab/crab.txt
+know	Lobster		data/chars/Lobster/Lobster.txt

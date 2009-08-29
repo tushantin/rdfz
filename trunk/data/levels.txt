@@ -1,0 +1,69 @@
+# List level filenames here.
+#
+# Syntax:
+#	set	[difficulty]	Start a new set of levels (e.g. "normal")
+#
+#	file	[filename]	A level or part of a level
+#	next			Go to next level (show "stage clear" and stuff)
+#	scene	[filename]	Show a cut-scene
+#
+
+hiscorebg 1 
+completebg 1
+
+p1life 135 35
+p1mp 135 45 
+p1lifex 293 18 
+p1lifen 310 18
+p1score 135 16
+p1rush 12 125
+
+p1namej 138 16 138 8 138 16  
+p2life 512 35
+p2mp 512 45
+
+olbarsize 150 8 0 0 0 0 0 0 0
+
+e1icon	126 60
+e1name	156 60
+e1life	156 80
+
+lbarsize 150 10 1 0 0 0 0 0 0
+mpbarsize 100 6 1 1 0 0 0 0 0
+timeicon data\sprites\chronometer2.gif 112 2 
+timeloc 144 8 0 0 1   
+rush 1 6 RUSH 3 2 MAX 3 0
+loadingbg 1 0 265 336 0 0 0 
+loadingbg2 1 0 265 336 0 0 0 
+
+p1icon 0 0
+p2icon 690 15
+
+#####################
+
+set	Testing
+skipselect serge
+file	data/levels/example1.txt
+branch start
+typemp 1 
+z 240 342 160 
+file	data/levels/testing.txt
+next
+file	data/levels/holes.txt
+scene	data/scenes/ending.txt
+
+
+set	water_(3_levels)
+skipselect serge
+file	data/levels/example1.txt
+branch start
+file	data/levels/water.txt
+file	data/levels/water2.txt
+file	data/levels/water3.txt
+
+set	modes_(2_levels)
+file	data/levels/neon.txt
+file	data/levels/screen.txt
+
+set	mirror_(1_level)
+file	data/levels/mirror.txt
