@@ -1,0 +1,13 @@
+name	mi_kid
+health	0
+type	text
+subtype noskip
+shadow	0
+setlayer 268435466
+
+anim idle
+	loop	0
+	offset	9 13
+	delay	99999999
+	frame	data/chars/misc/intro.png
+

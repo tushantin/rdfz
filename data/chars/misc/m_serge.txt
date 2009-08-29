@@ -1,0 +1,17 @@
+name	m_serge
+health	0
+type	text
+subtype noskip
+shadow	0
+setlayer 268435466
+
+anim idle
+	loop	1
+		offset  9 13
+		delay  20
+	frame	data/chars/serge/Standing/th_000B_001.gif
+	frame	data/chars/serge/Standing/th_000B_000.gif
+	frame  data/chars/serge/Standing/th_000B_013.gif
+	frame	data/chars/serge/Standing/th_000B_012.gif
+	frame	data/chars/serge/Standing/th_000B_013.gif
+

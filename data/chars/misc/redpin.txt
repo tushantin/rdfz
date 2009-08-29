@@ -1,0 +1,14 @@
+name	RedPin
+health	0
+score	1000
+type	item
+shadow	0
+
+
+anim idle
+	loop	0
+	delay	1000
+	offset	7 14
+	bbox	0 0 16 16
+	frame	data/chars/misc/RedP1.png
+

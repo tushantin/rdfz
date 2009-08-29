@@ -1,0 +1,14 @@
+panel		data/bgs/street/n01.gif
+order	a
+
+levelscript data/scripts/mload.c
+updatedscript data/scripts/mupdate.c
+endlevelscript data/scripts/munload.c
+
+
+
+
+#--group1-----
+spawn	mbg
+coords	0 0
+at	0

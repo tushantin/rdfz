@@ -1,0 +1,13 @@
+name	m_dummy
+health	0
+type	text
+subtype noskip
+shadow	0
+setlayer 268435466
+
+anim idle
+	loop	1
+	offset	9 13
+	delay	20
+	frame	data/chars/misc/secret.gif
+

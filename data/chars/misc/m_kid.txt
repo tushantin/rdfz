@@ -1,0 +1,20 @@
+name	m_kid
+health	0
+type	text
+subtype noskip
+shadow	0
+setlayer 268435466
+
+anim idle
+	loop	0
+	offset	9 13
+	delay	20
+	frame	data/chars/kid/stand1.gif
+	frame	data/chars/kid/stand2.gif
+	frame	data/chars/kid/stand3.gif
+	frame	data/chars/kid/stand4.gif
+	frame	data/chars/kid/stand5.gif
+	frame	data/chars/kid/stand6.gif
+	delay	-1
+	frame	data/chars/kid/stand7.gif
+

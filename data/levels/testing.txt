@@ -1,0 +1,61 @@
+# File modified by Level Editor on 7/27/2009
+# File modified by Level Editor on 7/27/2009
+# File modified by Level Editor on 7/27/2009
+music		data/music/DREAM.bor
+bossmusic	data/music/menu.bor
+
+background	data/bgs/TESTING/sky.gif
+water		data/bgs/TESTING/skyland.gif		15
+
+panel		data/bgs/TESTING/skyland.gif none none
+
+order	aaaaaaaaaaaaaaaaaaaa
+
+# key script mainly for menu 
+keyscript data/scripts/menus.c
+# update script
+updatedscript data/scripts/menu.c
+
+#---------------------
+
+spawn	1up
+coords	200 280
+at	0
+
+spawn	money
+coords	250 280
+at	0
+
+spawn	redpin
+coords	300 380
+at	0
+
+#---------------------
+
+spawn	Angel
+coords	380 160
+at	800
+
+
+wait
+at	900
+
+
+
+spawn	Billy
+coords	380 260
+at	800
+
+
+wait
+at	900
+
+
+spawn	Jhun
+boss	1
+coords	280 300
+at	600
+
+
+wait
+at	750

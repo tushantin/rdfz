@@ -1,0 +1,3 @@
+
+background data/bgs/title.gif 1
+allowselect kula
